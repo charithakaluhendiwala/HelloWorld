@@ -6,17 +6,21 @@ pipeline {
       
     stage("build") {
       steps {
-        echo 'building the application...'
+        withMaven (maven : 'maven_3_8_5') {
+          sh 'mvn clean compile'
+          }
+        }
       }
-    }
     stage("test") {
       steps {
-        echo 'testing the application...'
+        withMaven (maven : 'maven_3_8_5') {
+          sh 'mvn test'
+        }
       }
     }
     stage("deploy") {
       steps {
-        echo 'deploying the application...'
+        withMaven (maven : 'maven_3_8_5')  
       }
     }
   }
