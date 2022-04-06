@@ -20,9 +20,10 @@ pipeline {
     }
     stage("deploy") {
       steps {
-        withMaven (maven : 'maven_3_8_5')  
+        withMaven (maven : 'maven_3_8_5')  {
+          sh 'mvn deploy' 
+        }
       }
     }
   }
-}
-  
+}  
