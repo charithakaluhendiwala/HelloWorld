@@ -19,7 +19,7 @@ public class CheckHTTPResponse {
 
     @Test
     public void shouldPassIfStringMatches() throws Exception {
-        assertThat(restTemplate.getForObject("http://localhost:" + port + "/hello",
+        assertThat(restTemplate.getForObject("http://localhost:" + port + "/",
                 String.class)).contains("Hello World!");
     }
 }
