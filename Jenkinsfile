@@ -6,7 +6,7 @@ pipeline {
       
     stage("build") {
       steps {
-        cho 'Success'
+        echo 'Success'
 //         withMaven (maven : 'maven_3_8_5') {
 //           echo 'Success'
 //           sh 'mvn clean compile'
