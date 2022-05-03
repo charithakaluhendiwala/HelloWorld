@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: HelloWorld-0.0.1-SNAPSHOT
+spec:
+  selector:
+    matchLabels:
+      app: HelloWorld-0.0.1-SNAPSHOT
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: spring-boot-k8s
+    spec:
+      containers:
+        - name: HelloWorld-0.0.1-SNAPSHOT
+          image: HelloWorld/HelloWorld-0.0.1-SNAPSHOT:1.0 
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
