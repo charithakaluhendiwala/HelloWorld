@@ -6,11 +6,11 @@ pipeline {
       
     stage("build") {
       steps {
-        echo 'Success'
-//         withMaven (maven : 'maven_3_8_5') {
-//           echo 'Success'
-//           sh 'mvn clean compile'
-//           }
+        //echo 'Success'
+        withMaven (maven : 'maven_3_8_5') {
+          //echo 'Success'
+          sh 'mvn clean compile'
+          }
         }
       }
     stage("test") {
