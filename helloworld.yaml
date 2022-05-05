@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: springboot
-          image: kasunwimaladarma/springboot-app
+          image: kasunwimaladarma/springboot-app:latest
           ports:
             - containerPort: 8080
           env:
