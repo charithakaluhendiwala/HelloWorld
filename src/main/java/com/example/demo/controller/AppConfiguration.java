@@ -27,5 +27,6 @@ public class AppConfiguration {
 public String hello() {
 	logger.info("pass");
 	return "Hello World!";
+	//hi
 }
 }
