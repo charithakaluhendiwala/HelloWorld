@@ -17,9 +17,9 @@ spec:
           image: kasunwimaladarma/springboot-app:latest
           ports:
             - containerPort: 8080
-          env:
-            - name: PORT
-              value: "8080"
+#           env:
+#             - name: PORT
+#               value: "8080"
 ---
 apiVersion: v1
 kind: Service
