@@ -10,17 +10,7 @@
         </layout>
     </appender>
 
-    <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <param name="Encoding" value="UTF-8"/>
-        <remoteHost>127.0.0.1</remoteHost>
-        <port>9090</port>
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
-            <customFields>{"applicationName":"${applicationName}","env":"${env}"}</customFields>
-        </encoder>
-    </appender>
-
     <logger name="com.example.demo.AppConfiguration" level="info" additivity="false">
         <appender-ref ref="Console"/>
-        <appender-ref ref="logstash" />
     </logger>
 </configuration>
