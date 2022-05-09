@@ -26,6 +26,7 @@ public class AppConfiguration {
 @RequestMapping("/")
 public String hello() {
 	logger.info("pass");
-	return "Hello World";
+	return "Hello World 1";
 }
 }
+ 
